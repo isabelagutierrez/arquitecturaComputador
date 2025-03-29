@@ -1,0 +1,257 @@
+
+*** Running vivado
+    with args -log divisorFrec.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source divisorFrec.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source divisorFrec.tcl -notrace
+Command: synth_design -top divisorFrec -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 992
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1172.156 ; gain = 18.277
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'divisorFrec' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/divisorFrec.vhd:34]
+INFO: [Synth 8-3491] module 'uniControl' declared at 'C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:24' bound to instance 'controlUnit' of component 'uniControl' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/divisorFrec.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'uniControl' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:43]
+INFO: [Synth 8-226] default block is never used [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'uniControl' (1#1) [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'divisorFrec' (2#1) [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/divisorFrec.vhd:34]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1225.219 ; gain = 71.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1225.219 ; gain = 71.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1225.219 ; gain = 71.340
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1225.219 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/isabelagutierrez/Documents/otro.xdc]
+Finished Parsing XDC File [C:/Users/isabelagutierrez/Documents/otro.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/isabelagutierrez/Documents/otro.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/divisorFrec_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/divisorFrec_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1325.734 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1325.734 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1325.734 ; gain = 171.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1325.734 ; gain = 171.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1325.734 ; gain = 171.855
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'currentState_reg' in module 'uniControl'
+WARNING: [Synth 8-327] inferring latch for variable 'IRwrite_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:112]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 fetchst |                             0000 |                             0000
+                decodest |                             0001 |                             0001
+               memaddrst |                             0010 |                             0010
+               memreadst |                             0011 |                             0011
+                 memwbst |                             0100 |                             0100
+              memwritest |                             0101 |                             0101
+               executest |                             0110 |                             0110
+                branchst |                             0111 |                             1000
+                  jumpst |                             1000 |                             1001
+                addiexst |                             1001 |                             1010
+                andiexst |                             1010 |                             1011
+                 oriexst |                             1011 |                             1100
+                sltiexst |                             1100 |                             1101
+                 luiexst |                             1101 |                             1110
+                   wbist |                             1110 |                             1111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'currentState_reg' using encoding 'sequential' in module 'uniControl'
+WARNING: [Synth 8-327] inferring latch for variable 'memToR_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:115]
+WARNING: [Synth 8-327] inferring latch for variable 'memWrite_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:113]
+WARNING: [Synth 8-327] inferring latch for variable 'memRead_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:112]
+WARNING: [Synth 8-327] inferring latch for variable 'IorD_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:115]
+WARNING: [Synth 8-327] inferring latch for variable 'pcWrite_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:112]
+WARNING: [Synth 8-327] inferring latch for variable 'branch_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:115]
+WARNING: [Synth 8-327] inferring latch for variable 'pcSrc_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:115]
+WARNING: [Synth 8-327] inferring latch for variable 'aluOp_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:114]
+WARNING: [Synth 8-327] inferring latch for variable 'aluSrcB_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:114]
+WARNING: [Synth 8-327] inferring latch for variable 'aluSrcA_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:113]
+WARNING: [Synth 8-327] inferring latch for variable 'regWrite_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:113]
+WARNING: [Synth 8-327] inferring latch for variable 'regDst_reg' [C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.srcs/sources_1/new/uniControl.vhd:114]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1325.734 ; gain = 171.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input    4 Bit        Muxes := 1     
+	  10 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	  11 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	  11 Input    2 Bit        Muxes := 3     
+	  11 Input    1 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1325.734 ; gain = 171.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1325.734 ; gain = 171.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1325.734 ; gain = 171.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1340.242 ; gain = 186.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1346.074 ; gain = 192.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1346.074 ; gain = 192.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1346.074 ; gain = 192.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1346.074 ; gain = 192.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1346.074 ; gain = 192.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1346.074 ; gain = 192.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     7|
+|3     |LUT1   |     1|
+|4     |LUT2   |     4|
+|5     |LUT3   |     4|
+|6     |LUT4   |    14|
+|7     |LUT5   |     2|
+|8     |LUT6   |     8|
+|9     |FDCE   |    31|
+|10    |LD     |    15|
+|11    |IBUF   |     8|
+|12    |OBUF   |    20|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1346.074 ; gain = 192.195
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1346.074 ; gain = 91.680
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1346.074 ; gain = 192.195
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1358.094 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1358.094 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 15 instances were transformed.
+  LD => LDCE: 15 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1358.094 ; gain = 204.215
+INFO: [Common 17-1381] The checkpoint 'C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.runs/synth_1/divisorFrec.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file divisorFrec_utilization_synth.rpt -pb divisorFrec_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 29 10:44:45 2025...

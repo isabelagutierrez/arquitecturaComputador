@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Mar 29 10:39:28 2025
+# Process ID: 12800
+# Current directory: C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.runs/impl_1
+# Command line: vivado.exe -log divisorFrec.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source divisorFrec.tcl -notrace
+# Log file: C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.runs/impl_1/divisorFrec.vdi
+# Journal file: C:/Users/isabelagutierrez/Documents/computadorDos/proyectoDos/proyectoDos.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source divisorFrec.tcl -notrace
